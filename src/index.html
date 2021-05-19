@@ -6,9 +6,52 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
+
+    <header><h1>VALIDADOR DE TARJETAS DE CRÉDITO</h1></header>
+
+    <main>
+      <div class= box1>
+      
+      <div class="validator">
+      <h2>INGRESA TU NÚMERO</h2> 
+        <input type="text" id="numeroTarjeta" style="text-align:center"> <br>
+        <br> <button onclick="obtenerNumero(), mResultado('resultado')" id="boton" class="boton">VERIFICAR</button>
+      </div> 
+      
+      <div class="resultado" id="resultado" style="display:none">
+        <p>De acuerdo al Algoritmo de Luhn, tu número es</p>
+        <span id="show"> </span>
+      </div>
+    
+      </div>
+
+      <div class="box2">
+      <section id="section1">
+        <h3>Instrucciones de uso</h3>
+        <ul>
+          <li>Escriba su número de tarjeta en el espacio indicado.</li>
+          <li>No ingrese espacios ni guiones.</li>
+          <li>De click en el botón 'Verificar'.</li>
+          <li>Aparecerá en la pantalla si su número es válido o inválido.</li>
+          <li>Para utilizar de nuevo, borre el número anterior y repita los pasos.</li>
+        </ul>
+      </section>
+      
+      <section id="section2">
+      <h3>¿Cómo funciona esta herramienta?</h3>
+       <p>Esta página web verifica si el número ingresado (ya sea de tarjeta de crédito o débito) es válido mediante la utilización del Algoritmo de Luhn. Se define como una fórmula de suma de verificación diseñada para detectar cualquier error de un único dígito, así como casi todas las transposiciones de dígitos adyacentes.</p>
+      </section>
+    </div>
+    </main>
+
+    <footer> 
+      <h4>ESTE SERVICIO ES SEGURO DE UTILIZAR</h4> 
+      <p>No accederemos ni almacenaremos ningún tipo de dato que ingreses en esta página web. <br>
+         Todos los cálculos son realizados con tecnología JavaScript por lo que tu número de tarjeta de crédito se mantendrá a salvo contigo. </p>
+    </footer>
+  
+    <script src="index.js"></script>
   </body>
+
+
 </html>
