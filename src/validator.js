@@ -1,10 +1,5 @@
 const validator = {
-  // ...
-};
-
-export default validator;
-
-function obtenerNumero(){
+isValid : function(){
   let input = document.getElementById("numeroTarjeta").value;
   let numbers = input.toString().split('').map(Number);
   let total = 0;
@@ -37,15 +32,8 @@ function obtenerNumero(){
    else {
       document.getElementById("show").innerText = "I N V Á L I D O";    
       }
-  } 
-}
+    } 
+  },
+} 
 
-function mResultado(mostrar) {
-  let result = document.getElementById(mostrar)
-  let input = document.getElementById("numeroTarjeta").value;
-      if(input === ""){
-          result.style.display = "none"; 
-      }
-      else{result.style.display = "block";   
-      }   
-}
+export default validator.isValid();

@@ -5,8 +5,8 @@
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  
   <body>
-
     <header><h1>VALIDADOR DE TARJETAS DE CRÉDITO</h1></header>
 
     <main>
@@ -15,7 +15,7 @@
       <div class="validator">
       <h2>INGRESA TU NÚMERO</h2> 
         <input type="text" id="numeroTarjeta" style="text-align:center"> <br>
-        <br> <button onclick="obtenerNumero(), mResultado('resultado')" id="boton" class="boton">VERIFICAR</button>
+        <br> <button onclick="validator.isValid(), mResultado('resultado')" id="boton" class="boton">VERIFICAR</button>
       </div> 
       
       <div class="resultado" id="resultado" style="display:none">
