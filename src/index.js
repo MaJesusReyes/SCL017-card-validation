@@ -1,14 +1,19 @@
-import validator from './validator.js';
-
-console.log(validator);
+import * as validator from './validator.js';
 
 
-function mResultado(mostrar) {
-    let result = document.getElementById(mostrar)
-    let input = document.getElementById("numeroTarjeta").value;
-        if(input === ""){
-            result.style.display = "none"; 
-        }
-        else{result.style.display = "block";   
-        }   
-  };
+let botoncito = document.getElementById("boton");
+    botoncito.addEventListener("click", ()=> {
+    validator.validator.isValid()
+}); 
+
+    botoncito.addEventListener("click", ()=> {
+    validator.validator.mResultado('resultado')
+});
+
+let label = document.getElementById("numeroTarjeta");
+    label.addEventListener("keyup", ()=> {
+    validator.validator.maskify()
+});
+
+console.log(validator.capsule);
+console.log(validator.validator);
