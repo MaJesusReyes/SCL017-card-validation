@@ -3,12 +3,11 @@ let capsule = [];
 
 const validator = {
 isValid : ()=>{
-        let input = document.getElementById("numeroTarjeta").value;
-        let numbers = input.toString().split('').map(Number);
+        let numbers = capsule.reverse;
         let total = 0;
         let numPar = 0;
         
-        if (input === ""){
+        if (numbers === ""){
             alert("Por favor ingresa un número")
         }
         else {
@@ -27,7 +26,6 @@ isValid : ()=>{
                 total = total + numbers[i];
                 }
             }
-            console.log(total);
       
          if (total % 10 === 0){
             document.getElementById("show").innerText = "V Á L I D O";   
@@ -36,16 +34,17 @@ isValid : ()=>{
             document.getElementById("show").innerText = "I N V Á L I D O";    
             }
           } 
+          capsule = [];
         }, 
 
 
-maskify: (e)=> {
-    let numbers = e.target.value;
+maskify: ()=> {
+    let numbers = document.getElementById("numeroTarjeta").value;
     capsule.push(numbers[numbers.length-1]);
     numbers = numbers.split('');
     
     let hidden = [];
-    for (i=0; i<numbers.length; i++){
+    for (let i=0; i<numbers.length; i++){
 
         if (i < numbers.length-4){
             hidden.push('#');
