@@ -1,7 +1,7 @@
 import * as validator from './validator.js';
 
 
-let botoncito = document.getElementById("boton");
+const botoncito = document.getElementById("boton");
     botoncito.addEventListener("click", ()=> {
     validator.validator.isValid()
 }); 
@@ -10,7 +10,7 @@ let botoncito = document.getElementById("boton");
     validator.validator.mResultado('resultado')
 });
 
-let label = document.getElementById("numeroTarjeta");
+const label = document.getElementById("numeroTarjeta");
     label.addEventListener("keyup", ()=> {
     validator.validator.maskify()
 });

@@ -14,18 +14,18 @@ isValid : ()=>{
         else {
             for (let i=0; i<numbers.length; i++){
                 if ( i % 2 === 0) {
-                numPar = (+numbers[i] * 2)
-                    if (numPar > 9){
+                numPar = (Number(numbers[i]) * 2)
+                    if (Number(numPar) > 9){
                     numPar = numPar.toString().split("").map(Number);
-                    total = total + +numPar[0] + +numPar[1];
+                    total = total + Number(numPar[0]) + Number(numPar[1]);
                     console.log(numPar);
                     }
                     else {
-                    total = total + +numPar;
+                    total = total + Number(numPar);
                     }
                 }
                 else {
-                total = total + +numbers[i];
+                total = total + Number(numbers[i]);
                 }
             console.log(total);
             }
